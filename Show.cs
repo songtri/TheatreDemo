@@ -15,11 +15,15 @@ namespace TheatreDemo
 
 		public Show(Movie movie, Day day, double price, Time time)
 		{
+			Price = price;
+			Day = day;
+			Movie = movie;
+			Time = time;
 		}
 
 		public override string ToString()
 		{
-			return base.ToString();
+			return $"Movie: {Movie} Show time: {Time} {Day} with {Price:C}";
 		}
 	}
 }
