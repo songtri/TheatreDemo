@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Group Information:
+// Michael Magtibay 301029090
+// Wook Song 301047817
 namespace TheatreDemo
 {
 	class Program

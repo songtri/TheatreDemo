@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//michael magtibay 301029090
 namespace TheatreDemo
 {
 	class Theatre
