@@ -23,7 +23,7 @@ namespace TheatreDemo
 
 		public override string ToString()
 		{
-			return $"Movie: {Movie} Show time: {Time} {Day} with {Price:C}";
+			return $"Movie: {Movie}\nShow time: {Time} {Day} with {Price:C2}";
 		}
 	}
 }

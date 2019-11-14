@@ -16,25 +16,25 @@ namespace TheatreDemo
 
 		public Movie(string title, int year, int length)
 		{
-            this.Title = title;
-            this.Year = year;
-            this.Length = length;
-            this.Cast = new List<string>();
+			Title = title;
+			Year = year;
+			Length = length;
+			Cast = new List<string>();
 		}
 
 		public void AddActor(string actor)
 		{
-            Cast.Add(actor);
+			Cast.Add(actor);
 		}
 
 		public void SetGenre(Genre genre)
 		{
-            this.Genre = genre;
+			Genre = genre;
 		}
 
 		public override string ToString()
 		{
-            return $"{Title}\nYear:{Year}\nLength:{Length}\nGenre:{Genre}\nCast:{string.Join(",", Cast)}";
+			return $"{Title}\n\tYear:{Year}\n\tLength:{Length} Minute\n\tGenre:{Genre}\n\tCast:{string.Join(", ", Cast)}";
 		}
 	}
 }

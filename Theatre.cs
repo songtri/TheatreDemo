@@ -22,6 +22,7 @@ namespace TheatreDemo
 
 		public void PrintShows()
 		{
+			Console.WriteLine($"{Name} Theater");
 			foreach (var show in shows)
 			{
 				Console.WriteLine(show);
@@ -30,6 +31,7 @@ namespace TheatreDemo
 
 		public void PrintShows(Genre genre)
 		{
+			Console.WriteLine($"{Name} Theater");
 			foreach (var show in shows)
 			{
 				if (show.Movie.Genre.HasFlag(genre))
@@ -41,37 +43,41 @@ namespace TheatreDemo
 
 		public void PrintShows(Day day)
 		{
-			var Shows = shows.FindAll(d => d.Day == day);
-			foreach (var show in Shows)
+			Console.WriteLine($"{Name} Theater");
+			foreach (var show in shows)
 			{
-				Console.WriteLine(show);
+				if (show.Day == day)
+					Console.WriteLine(show);
 			}
 		}
 
 		public void PrintShows(Time time)
 		{
-			var Shows = shows.FindAll(t => t.Time == time);
-			foreach (var show in Shows)
+			Console.WriteLine($"{Name} Theater");
+			foreach (var show in shows)
 			{
-				Console.WriteLine(show);
+				if (show.Time == time)
+					Console.WriteLine(show);
 			}
 		}
 
 		public void PrintShows(string actor)
 		{
-			var Shows = shows.FindAll(a => a.Movie.Cast.Contains(actor));
-			foreach (var show in Shows)
+			Console.WriteLine($"{Name} Theater");
+			foreach (var show in shows)
 			{
-				Console.WriteLine(show);
+				if (show.Movie.Cast.Contains(actor))
+					Console.WriteLine(show);
 			}
 		}
 
 		public void PrintShows(Day day, Time time)
 		{
-			var Shows = shows.FindAll(s => s.Time == time && s.Day == day);
-			foreach (var show in Shows)
+			Console.WriteLine($"{Name} Theater");
+			foreach (var show in shows)
 			{
-				Console.WriteLine(show);
+				if (show.Time == time && show.Day == day)
+					Console.WriteLine(show);
 			}
 		}
 	}

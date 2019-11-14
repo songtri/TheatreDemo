@@ -16,9 +16,11 @@ namespace TheatreDemo
 			terminator.AddActor("Linda Hamilton");
 			Show s1 = new Show(terminator, Day.Mon, 5.95, new Time(11, 35));
 
+			Console.WriteLine("Console.WriteLine(s1)");
 			Console.WriteLine(s1);              //displays one object
 			Theatre eglinton = new Theatre("Cineplex");
 			eglinton.AddShow(s1);
+			Console.WriteLine("\n\neglinton.PrintShows()");
 			eglinton.PrintShows();              //displays one object
 
 			Movie godzilla = new Movie("Godzilla 2014", 2014, 123);
@@ -114,16 +116,24 @@ namespace TheatreDemo
 			eglinton.AddShow(new Show(godzilla, Day.Fri, 8.50, new Time(18, 25)));
 			eglinton.AddShow(new Show(avengers, Day.Sun, 10.75, new Time(14, 15)));
 
+			Console.WriteLine("\n\neglinton.PrintShows()");
 			eglinton.PrintShows();                              //displays 27 objects
+			Console.WriteLine("\n\neglinton.PrintShows(Day.Sun)");
 			eglinton.PrintShows(Day.Sun);                       //displays 8 objects
+			Console.WriteLine("\n\neglinton.PrintShows(Genre.Action)");
 			eglinton.PrintShows(Genre.Action);                  //displays 19 objects
+			Console.WriteLine("\n\neglinton.PrintShows(Genre.Romance)");
 			eglinton.PrintShows(Genre.Romance);                 //displays 8 objects
+			Console.WriteLine("\n\neglinton.PrintShows(Genre.Action | Genre.Romance)");
 			eglinton.PrintShows(Genre.Action | Genre.Romance);  //displays 3 objects
+			Console.WriteLine("\n\neglinton.PrintShows(\"Morgan Freeman\")");
 			eglinton.PrintShows("Morgan Freeman");              //displays 5 objects
 
 			Time time = new Time(14, 05);
+			Console.WriteLine($"\n\neglinton.PrintShows({time})");
 			eglinton.PrintShows(time);                          //displays 6 objects
 
+			Console.WriteLine($"\n\neglinton.PrintShows({Day.Sun}, {time})");
 			eglinton.PrintShows(Day.Sun, time);                 //displays 3 objects
 		}
 	}
